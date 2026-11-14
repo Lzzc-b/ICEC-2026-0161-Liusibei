@@ -1,0 +1,24 @@
+NEW-RECORDING BLIND TEST (frozen baseline)
+Model: original 50-training-recording standardized Euclidean 3-NN, 16 features
+Prediction stage did not read the answer key.
+Prediction SHA256: ad36918017940a9107a2a5941b969bc4e611f6761f0e9468e34331ef4878c15a
+Overall accuracy: 9/25 = 36.0%
+
+Per-condition recall:
+01_cold_low: 0/5 = 0.0%
+02_hot_low: 3/5 = 60.0%
+03_hot_high: 3/5 = 60.0%
+04_inlet_block: 1/5 = 20.0%
+05_outlet_block: 2/5 = 40.0%
+
+Confusion matrix (rows=actual, columns=predicted):
+actual\pred,01_cold_low,02_hot_low,03_hot_high,04_inlet_block,05_outlet_block
+01_cold_low,0,3,2,0,0
+02_hot_low,0,3,2,0,0
+03_hot_high,0,2,3,0,0
+04_inlet_block,1,2,0,1,1
+05_outlet_block,0,2,1,0,2
+
+This is a single new-session evaluation. The class labels in
+the answer key are based on the experimenter's recording log and
+should be confirmed against the actual switch/obstruction settings.

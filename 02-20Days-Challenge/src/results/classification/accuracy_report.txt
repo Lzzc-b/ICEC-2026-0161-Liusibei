@@ -1,0 +1,25 @@
+Recording-level held-out evaluation
+Random seed: 2026
+Model: standardized Euclidean kNN, k=3, 16 features
+Split: 50 training and 25 test recordings; 5 test recordings per class
+Scaling fitted on training recordings only.
+Overall accuracy: 13/25 = 52.0%
+
+Per-class recall (correct / test recordings):
+01_cold_low: 2/5 = 40.0%
+02_hot_low: 3/5 = 60.0%
+03_hot_high: 0/5 = 0.0%
+04_inlet_block: 5/5 = 100.0%
+05_outlet_block: 3/5 = 60.0%
+
+Confusion matrix (rows=true, columns=predicted):
+true\pred,01_cold_low,02_hot_low,03_hot_high,04_inlet_block,05_outlet_block
+01_cold_low,2,2,1,0,0
+02_hot_low,0,3,2,0,0
+03_hot_high,0,5,0,0,0
+04_inlet_block,0,0,0,5,0
+05_outlet_block,0,0,0,2,3
+
+Limitations: one fixed holdout split, 15 recordings per class,
+and all data from the same experimental setup. This is an internal
+test estimate, not a blind or cross-device accuracy claim.

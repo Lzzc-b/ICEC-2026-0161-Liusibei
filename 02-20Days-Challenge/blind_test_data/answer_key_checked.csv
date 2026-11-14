@@ -1,0 +1,26 @@
+﻿sample_id,true_condition,wav_file,csv_file,recorded_at
+01_cold_low_B01,01_cold_low,01_cold_low/01_cold_low_B_wav/01_cold_low_B01.wav,01_cold_low/01_cold_low_B_csv/01_cold_low_B01.csv,2026/11/14 22:27
+01_cold_low_B02,01_cold_low,01_cold_low/01_cold_low_B_wav/01_cold_low_B02.wav,01_cold_low/01_cold_low_B_csv/01_cold_low_B02.csv,2026/11/14 22:28
+01_cold_low_B03,01_cold_low,01_cold_low/01_cold_low_B_wav/01_cold_low_B03.wav,01_cold_low/01_cold_low_B_csv/01_cold_low_B03.csv,2026/11/14 22:29
+01_cold_low_B04,01_cold_low,01_cold_low/01_cold_low_B_wav/01_cold_low_B04.wav,01_cold_low/01_cold_low_B_csv/01_cold_low_B04.csv,2026/11/14 22:30
+01_cold_low_B05,01_cold_low,01_cold_low/01_cold_low_B_wav/01_cold_low_B05.wav,01_cold_low/01_cold_low_B_csv/01_cold_low_B05.csv,2026/11/14 22:30
+02_hot_low_B01,02_hot_low,02_hot_low/02_hot_low_B_wav/02_hot_low_B01.wav,02_hot_low/02_hot_low_B_csv/02_hot_low_B01.csv,2026/11/14 22:31
+02_hot_low_B02,02_hot_low,02_hot_low/02_hot_low_B_wav/02_hot_low_B02.wav,02_hot_low/02_hot_low_B_csv/02_hot_low_B02.csv,2026/11/14 22:36
+02_hot_low_B03,02_hot_low,02_hot_low/02_hot_low_B_wav/02_hot_low_B03.wav,02_hot_low/02_hot_low_B_csv/02_hot_low_B03.csv,2026/11/14 22:37
+02_hot_low_B04,02_hot_low,02_hot_low/02_hot_low_B_wav/02_hot_low_B04.wav,02_hot_low/02_hot_low_B_csv/02_hot_low_B04.csv,2026/11/14 22:37
+02_hot_low_B05,02_hot_low,02_hot_low/02_hot_low_B_wav/02_hot_low_B05.wav,02_hot_low/02_hot_low_B_csv/02_hot_low_B05.csv,2026/11/14 22:38
+03_hot_high_B01,03_hot_high,03_hot_high/03_hot_high_B_wav/03_hot_high_B01.wav,03_hot_high/03_hot_high_B_csv/03_hot_high_B01.csv,2026/11/14 22:39
+03_hot_high_B02,03_hot_high,03_hot_high/03_hot_high_B_wav/03_hot_high_B02.wav,03_hot_high/03_hot_high_B_csv/03_hot_high_B02.csv,2026/11/14 22:41
+03_hot_high_B03,03_hot_high,03_hot_high/03_hot_high_B_wav/03_hot_high_B03.wav,03_hot_high/03_hot_high_B_csv/03_hot_high_B03.csv,2026/11/14 22:42
+03_hot_high_B04,03_hot_high,03_hot_high/03_hot_high_B_wav/03_hot_high_B04.wav,03_hot_high/03_hot_high_B_csv/03_hot_high_B04.csv,2026/11/14 22:43
+03_hot_high_B05,03_hot_high,03_hot_high/03_hot_high_B_wav/03_hot_high_B05.wav,03_hot_high/03_hot_high_B_csv/03_hot_high_B05.csv,2026/11/14 22:46
+04_inlet_block_B01,04_inlet_block,04_inlet_block/04_inlet_block_B_wav/04_inlet_block_B01.wav,04_inlet_block/04_inlet_block_B_csv/04_inlet_block_B01.csv,2026/11/14 22:48
+04_inlet_block_B02,04_inlet_block,04_inlet_block/04_inlet_block_B_wav/04_inlet_block_B02.wav,04_inlet_block/04_inlet_block_B_csv/04_inlet_block_B02.csv,2026/11/14 22:49
+04_inlet_block_B03,04_inlet_block,04_inlet_block/04_inlet_block_B_wav/04_inlet_block_B03.wav,04_inlet_block/04_inlet_block_B_csv/04_inlet_block_B03.csv,2026/11/14 22:49
+04_inlet_block_B04,04_inlet_block,04_inlet_block/04_inlet_block_B_wav/04_inlet_block_B04.wav,04_inlet_block/04_inlet_block_B_csv/04_inlet_block_B04.csv,2026/11/14 22:50
+04_inlet_block_B05,04_inlet_block,04_inlet_block/04_inlet_block_B_wav/04_inlet_block_B05.wav,04_inlet_block/04_inlet_block_B_csv/04_inlet_block_B05.csv,2026/11/14 22:51
+05_outlet_block_B01,05_outlet_block,05_outlet_block/05_outlet_block_B_wav/05_outlet_block_B01.wav,05_outlet_block/05_outlet_block_B_csv/05_outlet_block_B01.csv,2026/11/14 22:53
+05_outlet_block_B02,05_outlet_block,05_outlet_block/05_outlet_block_B_wav/05_outlet_block_B02.wav,05_outlet_block/05_outlet_block_B_csv/05_outlet_block_B02.csv,2026/11/14 22:54
+05_outlet_block_B03,05_outlet_block,05_outlet_block/05_outlet_block_B_wav/05_outlet_block_B03.wav,05_outlet_block/05_outlet_block_B_csv/05_outlet_block_B03.csv,2026/11/14 22:55
+05_outlet_block_B04,05_outlet_block,05_outlet_block/05_outlet_block_B_wav/05_outlet_block_B04.wav,05_outlet_block/05_outlet_block_B_csv/05_outlet_block_B04.csv,2026/11/14 22:56
+05_outlet_block_B05,05_outlet_block,05_outlet_block/05_outlet_block_B_wav/05_outlet_block_B05.wav,05_outlet_block/05_outlet_block_B_csv/05_outlet_block_B05.csv,2026/11/14 22:57
