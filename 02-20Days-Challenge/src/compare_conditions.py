@@ -7,7 +7,7 @@ import csv
 import statistics
 from pathlib import Path
 
-SOURCE = Path("results/features/features_corrected.csv")
+SOURCE = Path("results/features/features.csv")
 OUT = Path("results/condition_comparison")
 PAIRS = [
     ("01_cold_low", "04_inlet_block", "冷风低档：进风口遮挡"),

@@ -1,6 +1,6 @@
 """Extract one row of audio and acceleration features per paired recording.
 
-Run: python src/extract_features.py --data-root D:/ --output results/features/features_corrected.csv
+Run: python src/extract_features.py --data-root D:/ --output results/features/features.csv
 """
 
 import argparse
@@ -45,7 +45,7 @@ def fft_power(samples, sample_rate):
     return [abs(z) ** 2 for z in a[:n // 2 + 1]]
 
 
-def summarize(values, sample_rate, bands, prefix, include_legacy_dc=False):
+def summarize(values, sample_rate, bands, prefix):
     n = len(values)
     if n < 64:
         raise ValueError("too few samples")
@@ -75,7 +75,7 @@ def summarize(values, sample_rate, bands, prefix, include_legacy_dc=False):
     total = sum(power[1:])
     for low, high in bands:
         energy = sum(p for i, p in enumerate(power)
-                     if (i >= 1 or include_legacy_dc) and low <= i * sample_rate / size < high)
+                     if i >= 1 and low <= i * sample_rate / size < high)
         result[f"{prefix}_band_{low}_{high}_fraction"] = energy / total if total else 0
     return result
 
@@ -134,7 +134,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--data-root", type=Path, default=Path("D:/"))
     parser.add_argument("--output", type=Path,
-                        default=Path("results/features/features_corrected.csv"))
+                        default=Path("results/features/features.csv"))
     args = parser.parse_args()
     rows = []
     for condition in CONDITIONS:
