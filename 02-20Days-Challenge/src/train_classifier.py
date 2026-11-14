@@ -12,7 +12,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 
-INPUT = Path("results/features/features.csv")
+INPUT = Path("results/features/features_corrected.csv")
 OUTPUT = Path("results/classification")
 SEED = 2026
 TEST_PER_CLASS = 5

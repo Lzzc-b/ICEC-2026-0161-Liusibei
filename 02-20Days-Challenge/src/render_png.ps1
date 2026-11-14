@@ -1,7 +1,7 @@
 Add-Type -AssemblyName System.Drawing
 $outputDir = Join-Path (Get-Location) 'results/classification'
 $rows = Import-Csv (Join-Path $outputDir 'test_predictions.csv')
-$features = Import-Csv (Join-Path (Get-Location) 'results/features/features.csv')
+$features = Import-Csv (Join-Path (Get-Location) 'results/features/features_corrected.csv')
 $labels = @('01_cold_low','02_hot_low','03_hot_high','04_inlet_block','05_outlet_block')
 $font = New-Object System.Drawing.Font('Arial', 12)
 $small = New-Object System.Drawing.Font('Arial', 10)

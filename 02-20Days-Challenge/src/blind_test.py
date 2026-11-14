@@ -14,12 +14,13 @@ import hashlib
 from pathlib import Path
 
 from extract_features import read_wav, read_acceleration, summarize
-from train_classifier import FEATURES, fit_scaler, load_rows, predict, split
+from train_classifier import FEATURES, fit_scaler, predict, split
 
 
 ROOT = Path("blind_test_data")
 OUT = Path("results/blind_test")
 KEY = ROOT / "answer_key_checked.csv"
+TRAIN_FEATURES = Path("results/legacy/features_v1_dc_bug.csv")
 
 
 def samples():
@@ -39,14 +40,15 @@ def samples():
     return result
 
 
-def extract_one(sample_id, wav_path, csv_path):
+def extract_one(sample_id, wav_path, csv_path, legacy=False):
     audio, audio_rate = read_wav(wav_path)
     accel, accel_rate, _ = read_acceleration(csv_path)
     row = {"sample_id": sample_id}
     row.update(summarize(audio, audio_rate,
                          [(0, 200), (200, 1000), (1000, 4000), (4000, 10000)], "audio"))
     row.update(summarize(accel, accel_rate,
-                         [(0, 5), (5, 15), (15, 30), (30, 50)], "accel"))
+                         [(0, 5), (5, 15), (15, 30), (30, 50)], "accel",
+                         include_legacy_dc=legacy))
     return row
 
 
@@ -55,12 +57,16 @@ def predict_stage():
     predictions_path = OUT / "predictions.csv"
     if predictions_path.exists():
         raise FileExistsError(f"Predictions already exist: {predictions_path}; preserving the first run")
-    original_rows = load_rows()
+    with TRAIN_FEATURES.open(newline="", encoding="utf-8-sig") as f:
+        original_rows = list(csv.DictReader(f))
+    for row in original_rows:
+        for feature in FEATURES:
+            row[feature] = float(row[feature])
     training, _ = split(original_rows)
     scaler = fit_scaler(training)
     blind_rows = []
     for sample_id, wav_path, csv_path in samples():
-        row = extract_one(sample_id, wav_path, csv_path)
+        row = extract_one(sample_id, wav_path, csv_path, legacy=True)
         blind_rows.append(row)
         print("Extracted", sample_id, flush=True)
     with (OUT / "blind_features.csv").open("w", newline="", encoding="utf-8-sig") as f:

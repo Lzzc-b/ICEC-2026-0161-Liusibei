@@ -22,7 +22,7 @@
 
 | 特征 | 基线中位数 | 目标中位数 | 目标较大概率 |
 |---|---:|---:|---:|
-| accel_band_0_5_fraction | 0.8516 | 0.3656 | 0.4% |
+| accel_band_0_5_fraction | 0.6639 | 0.3564 | 0.9% |
 | accel_band_5_15_fraction | 0.1811 | 0.3166 | 98.7% |
 | audio_band_0_200_fraction | 0.0228 | 0.1192 | 98.2% |
 | accel_zero_crossing_rate | 0.1501 | 0.3208 | 98.2% |
@@ -36,9 +36,9 @@
 |---|---:|---:|---:|
 | accel_band_5_15_fraction | 0.1848 | 0.2541 | 87.6% |
 | audio_zero_crossing_rate | 0.1692 | 0.1648 | 14.7% |
-| accel_band_0_5_fraction | 0.6247 | 0.454 | 18.2% |
 | audio_band_0_200_fraction | 0.0272 | 0.03159 | 76.9% |
 | audio_dominant_hz | 1453 | 293 | 26.4% |
+| accel_band_0_5_fraction | 0.5193 | 0.4282 | 27.1% |
 
 ### 热风低档与热风高档：档位变化
 
